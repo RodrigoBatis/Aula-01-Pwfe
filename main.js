@@ -1,26 +1,32 @@
-const titulo = document.getElementById("titulo")
-const nome = document.getElementById("nome")
-const vermelho = document.getElementById("vermelho")
-const azul = document.getElementById("azul")
-const verde = document.getElementById("verde")
+const titulo = document.getElementById ('titulo')   
 
-function trocarTituloVermelho(){
-    titulo.textContent = nome.value;
-    titulo.classList.add("vermelho")
+const nome = document.getElementById ('nome') 
+
+const ok = document.getElementById ('ok') 
+
+function trocarTitulo () {
+    titulo.textContent = nome.value
+    titulo.classList.add('vermelho')
 }
 
-vermelho.addEventListener("click", trocarTitulo )
+ok01.addEventListener('click' , trocarTitulo ) 
 
-function trocarTituloAzul(){
-    titulo.textContent = nome.value;
-    titulo.classList.add("azul")
+
+function alterarTitulo () {
+    titulo.textContent = nome.value
+    titulo.classList.add('azul')
 }
 
-azul.addEventListener("click", trocarTitulo )
 
-function trocarTituloVerde(){
-    titulo.textContent = nome.value;
-    titulo.classList.add("verde")
+ok02.addEventListener('click' , alterarTitulo )
+
+
+function modificarTitulo () {
+    titulo.textContent = nome.value
+    titulo.classList.add('verde')
 }
 
-verde.addEventListener("click", trocarTitulo )
+
+ok03.addEventListener('click' , modificarTitulo )
+
+console.log (nome)
