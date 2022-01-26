@@ -1,32 +1,27 @@
-const titulo = document.getElementById ('titulo')   
+/* Constantes */
+const titulo    = document.getElementById("titulo");
+const nome      = document.getElementById("nome");
+const bVermelho = document.getElementById("vermelho");
+const bAzul     = document.getElementById("azul");
+const bVerde    = document.getElementById("verde");
 
-const nome = document.getElementById ('nome') 
+/* Listeners */
+bVermelho.addEventListener("click", toggleRed);
+bAzul.addEventListener("click", toggleBlue);
+bVerde.addEventListener("click", toggleGreen);
 
-const ok = document.getElementById ('ok') 
-
-function trocarTitulo () {
-    titulo.textContent = nome.value
-    titulo.classList.add('vermelho')
+/* Functions */
+function toggleRed() {
+  titulo.innerHTML = nome.value;
+  titulo.classList.toggle("vermelho");
 }
 
-ok01.addEventListener('click' , trocarTitulo ) 
-
-
-function alterarTitulo () {
-    titulo.textContent = nome.value
-    titulo.classList.add('azul')
+function toggleBlue() {
+  titulo.innerHTML = nome.value;
+  titulo.classList.toggle("azul");
 }
 
-
-ok02.addEventListener('click' , alterarTitulo )
-
-
-function modificarTitulo () {
-    titulo.textContent = nome.value
-    titulo.classList.add('verde')
+function toggleGreen() {
+  titulo.innerHTML = nome.value;
+  titulo.classList.toggle("verde");
 }
-
-
-ok03.addEventListener('click' , modificarTitulo )
-
-console.log (nome)
